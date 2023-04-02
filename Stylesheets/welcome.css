@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* background-color: whitesmoke; */
+}
+
+.main-image {
+  background-image: url(https://s35691.pcdn.co/wp-content/uploads/2018/04/student-led-study-group-library-id842920176.jpg);
+  background-size: cover;
+  /* background-position: center top; */
+  position: absolute;
+  top: 0px;
+  width: 65%;
+  height: 50%;
+  /* left: auto; */
+  right: 0;
+  /* z-index: -1; */
+}
+.secondary-image {
+  background-image: url(https://www.signupgenius.com/cms/socialMediaImages/study-tips-college-students-facebook-1200x630.png);
+  background-size: cover;
+  /* background-position: center top; */
+  position: absolute;
+  top: 325px;
+  width: 65%;
+  height: 50%;
+  /* left: auto; */
+  right: 0;
+  /* z-index: -1; */
+}
+
+.mytext1 {
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  left: 60px;
+  top: 100px;
+}
+
+.mytext2 {
+  /* font-size: large;
+  font-weight: bold; */
+  position: relative;
+  left: 5px;
+  top: 150px;
+  font-size: 38px;
+  font-weight: 8px;
+}
+
+.mytext3 {
+  /* font-size: 1rem; */
+  /* color: #333; */
+  position: absolute;
+  left: 80px;
+  top: 210px;
+}
+.texts {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  margin: 45px;
+}
+
+.inputs {
+  color: black(82, 77, 77);
+  width: 16.5%;
+  height: 30px;
+  font-family:"Poppins", sans-serif;
+  padding: 5px;
+  font-size: 20px;
+  left: 50px;
+  border: none;
+  border-bottom: 2px solid darkslategray;
+}
+
+.inputs:hover {
+  border-color: dimgray;
+}
+
+.inputs:focus {
+  outline: none;
+}
+
+.message {
+  color: black(82, 77, 77);
+  background-color: white;
+  width: 20%;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  left: 50px;
+  top: 320px;
+  font-family: "Poppins", sans-serif;
+  pointer-events: none;
+}
+
+.message:focus {
+  outline: none;
+  border: none;
+}
+
+
+.block1 {
+  border: none;
+  /* outline: 0; */
+  background-color: black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  margin: 0px 4px 32px 0px;
+  padding: 15px 133px;
+  font-size: 18px;
+  position: relative;
+  left: 60px;
+  top: 100px;
+  font-family: "Poppins", sans-serif;
+}
+
+.block1:hover {
+  background-color: dimgray;
+  color: white;
+}
+
+.block2 {
+  border: solid 1px #000;
+  outline: 0;
+  color: black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  margin: 0px 4px 32px 0px;
+  padding: 15px 91px;
+  font-size: 18px;
+  position: relative;
+  left: 60px;
+  top: 65px;
+  font-family: "Poppins", sans-serif;
+}
+
+.block2:hover {
+  background-color: white;
+  color: dimgray;
+}
+
+.base {
+  position: relative;
+  padding-top: 50px;
+  margin-left: 470px;
+  top: 200px;
+  background-color: black;
+}
+
+.end-list{
+   text-align: center;
+   position: relative;
+   top: -20px;
+}

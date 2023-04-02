@@ -8,7 +8,7 @@ html {
     /* background-color: whitesmoke; */
 }
 
-.avs {
+/* .avs {
     display: flex;
     transition: 10s;
 }
@@ -106,7 +106,7 @@ html {
 
 .ar-btn2:hover {
     color: #777;
-}
+} */
 
 .hero-image {
     /* background-image: url("../image/audiQ3.jpg"); */
@@ -148,6 +148,17 @@ html {
     color: white;
 }
 
+.careers {
+  height: 500px;
+  width: 100%;
+  background-color: #ececec;
+}
+
+.careers img {
+  float: left;
+}
+
+/* lastref */
 
 .models {
     display: flex;

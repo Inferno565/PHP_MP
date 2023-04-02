@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color: rgba(231, 238, 240, 0.26);
+}
+
+.main-image {
+  height: 100%;
+  width: 100%;
+  background-color: #9bd3e463;
+  position: relative;
+}
+.main-text {
+  position: relative;
+  top: 20px;
+  left: 60px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+#b1 {
+  border: none;
+  outline: 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  margin: 0px 4px 32px 0px;
+  margin-left: 40px;
+  margin-top: 30px;
+  /* padding: 21px 48px; */
+  font-size: 15px;
+  padding-top: 20px;
+  padding-left: 35px;
+  padding-bottom: 20px;
+  padding-right: 35px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  top: -55px;
+  left: -40px;
+}
+
+#b1:hover {
+  background-color: #555;
+  color: white;
+}
+
+#b2 {
+  border: solid 1px #000;
+  outline: 0;
+  color: black;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  margin: 0px 4px 32px 0px;
+  margin-left: 40px;
+  margin-top: 30px;
+  /* padding: 21px 48px; */
+  font-size: 15px;
+  padding-top: 20px;
+  padding-left: 35px;
+  padding-bottom: 20px;
+  padding-right: 35px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  top: -55px;
+  left: -80px;
+}
+
+#b2:hover {
+  color: #777;
+}
+
+.careers {
+  height: 500px;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  background-color: #ececec;
+}
+
+.careers img {
+  float: left;
+}
+
+button {
+  width: 250px;
+  height: 60px;
+  background-color: #bb082f;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+.mySlides {
+  width: 70%;
+  height: 100%;
+  display: block;
+  margin-left: 200px;
+  margin-top: 4.5%;
+}
+.result {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  top: 300px;
+  margin: 50px 0px;
+  background-color: #ececec;
+}
+
+.result img {
+  float: right;
+}

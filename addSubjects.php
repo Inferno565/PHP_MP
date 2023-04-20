@@ -49,31 +49,31 @@
         <div class="subspane">
             <h3>Advanced Java</h3>
             <img class="paneimg" src="Images/java.jpg" alt="quattro">
-            <a href="#"><button class="button">Explore</button></a>
+            <a href="#"><button class="button">Create</button></a>
         </div>
         <!-- right -->
         <div class="subspaner">
             <h3>Client Side Scripting</h3>
             <img class="paneimg" src="Images/js.png" alt="quattro" style="height: 50%;width: 50%;left: 80px;">
-            <button class="button">Explore</button>
+            <button class="button">Create</button>
         </div>
         <!-- lower right -->
         <div class="subspaner" style="top:711px">
             <h3>Operating Systems</h3>
             <img class="paneimg" src="Images/os.jpg" alt="quattro" style="width: 50%;left: 80px;">
-            <button class="button">Explore</button>
+            <button class="button">Create</button>
         </div>
         <!-- low center -->
         <div class="subspane" style="top:711px;">
             <h3>Software Testing</h3>
             <img class="paneimg" src="Images/test.avif" alt="quattro" style="width: 60%;left: 50px;">
-            <button class="button">Explore</button>
+            <button class="button">Create</button>
         </div>
         <!-- low left -->
         <div class="subspanel">
             <h3>Environmental Studies</h3>
             <img class="paneimg" src="Images/est.jpeg" alt="quattro" style="left: 30px;width: 80%;">
-            <button class="button">Explore</button>
+            <button class="button">Create</button>
         </div>
     </div>
     <!-- 5th -->
@@ -88,32 +88,32 @@
         <div class="subspane">
             <h3>Programming with Python</h3>
             <img class="paneimg" src="Images/python.png" alt="quattro" style="width: 70%;left: 50px;">
-            <a href="etron Gt.html"><button class="button">Explore</button></a>
+            <a href="etron Gt.html"><button class="button">Create</button></a>
         </div>
         <!-- right -->
         <div class="subspaner">
             <h3>Web Based Programming</h3>
             <img class="paneimg" src="Images/php.png" alt="quattro" style="width: 70%;height: 50%;left: 50px;">
-            <button class="button">Explore</button>
+            <button class="button">Create</button>
         </div>
         <!-- lower right -->
         <div class="subspaner" style="top:711px">
             <h3>Mobile Application Development</h3>
             <img class="paneimg" src="Images/mad.png" alt="quattro" style="width: 70%;left: 50px;">
-            <button class="button">Explore</button>
+            <button class="button">Create</button>
         </div>
         <!-- low center -->
         <div class="subspane" style="top:711px;">
             <h3>Management</h3>
             <img class="paneimg" src="Images/man.jpeg" alt="quattro" style="width: 80%;left: 40px;">
-            <button class="button">Explore</button>
+            <button class="button">Create</button>
         </div>
         <!-- low left -->
         <div class="subspanel">
             <h3>Emerging Trends in Information Technology</h3>
             <img class="paneimg" src="Images/eti.jpeg" alt="quattro"
                 style="height: 50%;width: 50%;top: -10px;left: 70px;">
-            <button class="button" style="top: -6px;">Explore</button>
+            <button class="button" style="top: -6px;">Create</button>
         </div>
     </div>
     <!-- 6th -->

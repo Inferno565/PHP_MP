@@ -8,105 +8,7 @@ html {
     /* background-color: whitesmoke; */
 }
 
-/* .avs {
-    display: flex;
-    transition: 10s;
-}
 
-.avs img {
-    width: 575px;
-    height: 600px;
-    padding-left: 175px;
-    padding-top: 150px;
-    padding-bottom: 150px;
-}
-
-.avs-text {
-    position: relative;
-    top: 325px;
-    left: 60px;
-    color: black;
-   font-family: 'Poppins', sans-serif;
-    align-items: center;
-}
-
-.avs-text button {
-    border: none;
-    outline: 0;
-    color: white;
-    background-color: black;
-    text-align: center;
-    cursor: pointer;
-    margin: 0px 4px 32px 0px;
-    padding: 21px 48px;
-    font-size: 18px;
-}
-
-.avs-text button:hover {
-    background-color: #555;
-    color: white;
-}
-
-.ar {
-    display: flex;
-    transition: 10s;
-}
-
-.ar img {
-    width: 75%;
-    height: 60%;
-    padding-left: 175px;
-    padding-top: 150px;
-    padding-bottom: 150px;
-}
-
-.ar-text {
-    position: relative;
-    top: 325px;
-    left: 60px;
-    color: black;
-   font-family: 'Poppins', sans-serif;
-    align-items: center;
-}
-
-.ar-btn1 {
-    border: none;
-    outline: 0;
-    color: white;
-    background-color: black;
-    text-align: center;
-    cursor: pointer;
-    margin: 0px 4px 32px 0px;
-    margin-left: 00px;
-    margin-top: 30px;
-    padding: 21px 48px;
-    font-size: 18px;
-   font-family: 'Poppins', sans-serif;
-}
-
-.ar-btn1:hover {
-    background-color: #555;
-    color: white;
-}
-
-.ar-btn2 {
-    border: solid 1px #000;
-    outline: 0;
-    color: black;
-    background-color: white;
-    text-align: center;
-    cursor: pointer;
-    margin: 0px 4px 32px 0px;
-    margin-left: 1px;
-    margin-top: 30px;
-    padding: 21px 48px;
-    font-size: 18px;
-   font-family: 'Poppins', sans-serif;
-}
-
-.ar-btn2:hover {
-    color: #777;
-} */
 
 .hero-image {
     /* background-image: url("../image/audiQ3.jpg"); */
@@ -135,6 +37,38 @@ html {
     margin: 0px 4px 32px 0px;
     padding: 21px 48px;
     font-size: 18px;
+}
+.footer
+{
+font-size:15px;
+text-align:center;
+border-top:1px solid;
+border-color:#323232;
+background-color:#202020;
+}
+.footer a
+{
+margin:25px;
+color:orange;
+text-decoration:none;
+font: 15px "Century Gothic", "Times Roman", sans-serif;
+
+}
+.footer a:hover
+{
+text-decoration:none;
+color:#9acd32;
+border-top:2px solid;
+border-color:orange;
+
+}
+
+.box
+{
+padding:9px;
+}
+hr{
+color:#000000;
 }
 
 .hero-text p {

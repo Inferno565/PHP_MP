@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang='en'>
 <link rel="stylesheet" href="footer.css">
@@ -8,6 +11,7 @@
     <script>
         MyBanners = new Array('Images/ban1.jpg', 'Images/ban2.webp', 'Images/ban3.jpg', 'Images/ban4.jpg')
         banner = 0
+
         function ShowBanners() {
             banner++
             if (banner == MyBanners.length) {
@@ -17,82 +21,6 @@
             ChangeBanner.style.backgroundImage = `url('${MyBanners[banner]}')`
             setTimeout("ShowBanners()", 2300)
         }
-
-        function nameCheck() {
-            var letters = /^[A-Za-z]+$/;
-            var name = document.getElementById("t1").value;
-            if (!(name.match(letters))) {
-                document.getElementById("m1").value = "Name must only contain characters!";
-            }
-            else {
-                document.getElementById("m1").value = "";
-            }
-        }
-
-        function numCheck() {
-            var letters = /^[0-9]+$/;
-            var num = document.getElementById("t2").value;
-            if (num.match(letters) && num.length == 10) {
-                document.getElementById("m2").value = "";
-            }
-            else {
-                document.getElementById("m2").value = "Enter valid mobile number!"
-            }
-        }
-
-        function emailCheck() {
-            var letters = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            var email = document.getElementById("t3").value;
-            if (letters.test(email)) {
-                document.getElementById("m3").value = "";
-            }
-            else {
-                document.getElementById("m3").value = "Enter valid Email id!"
-            }
-        }
-
-        function passCheck() {
-            // var letters = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            var pass = document.getElementById("t4").value;
-            if (pass.length < 8) {
-                document.getElementById("m4").value = "Password must contain atleast 8 character!"
-            }
-            else {
-                document.getElementById("m4").value = "";
-            }
-        }
-
-        function checkFields() {
-            var name = document.getElementById("t1").value;
-            var num = document.getElementById("t2").value;
-            var email = document.getElementById("t3").value;
-            var password = document.getElementById("t4").value;
-            var msg1 = document.getElementById("m1").value;
-            var msg2 = document.getElementById("m2").value;
-            var msg3 = document.getElementById("m3").value;
-            var msg4 = document.getElementById("m4").value;
-
-            if (name == "" || num == "" || email == "" || password == "" || msg1 != "" || msg2 != "" || msg3 != "" || msg4 != "") {
-                document.getElementById("b1").value = "Fill All Details"
-            }
-        }
-        function ReturnPosition() {
-                document.getElementById("b1").value = "Create Account"
-        }
-
-        function CookieCreate() {
-            var name = escape(document.getElementById("t1").value) + ";";
-            var num = escape(document.getElementById("t2").value) + ";";
-            var email = escape(document.getElementById("t3").value) + ";";
-            var password = escape(document.getElementById("t4").value) + ";";
-            document.cookie = "name=" + name;
-            document.cookie = "number=" + num;
-            document.cookie = "email=" + email;
-            document.cookie = "password=" + password;
-            var allcookie = document.cookie;
-            alert("Account Created!")
-        }
-
     </script>
 </head>
 
@@ -100,43 +28,80 @@
     <a href="index.html" id="link" style="background-image: url('Images/ban1.avif');">
     </a>
 
-    <div id="form-container"
-        style="background-color: lightgray; height: 680px; width: 59%; position:relative ;top: 0px">
-        <form name="f1">
+    <div id="form-container" style="background-color: lightgray; height: 680px; width: 59%; position:relative ;top: 40px">
+        <form name="f1" method="post">
             <p class="texts">
                 Enter your Name<br>
-                <input type="text" class="inputs" id="t1" onchange="nameCheck()">
-                <input type="text" class="message" id="m1" value="" readonly="true">
+                <input type="text" class="inputs" name="n">
+
             </p>
 
             <p class="texts">
                 Mobile Number<br>
-                <input type="text" class="inputs" id="t2" onchange="numCheck()">
-                <input type="text" class="message" id="m2" value="" readonly="true">
+                <input type="text" class="inputs" name="m" onchange="numCheck()">
+
+            </p>
+
+            <p class="texts">
+                Roll Number<br>
+                <input type="text" class="inputs" name="r" onchange="numCheck()">
+
             </p>
 
             <p class="texts">
                 Email id<br>
-                <input type="text" class="inputs" id="t3" onchange="emailCheck()">
-                <input type="text" class="message" id="m3" value="" readonly="true">
+                <input type="text" class="inputs" name="e" onchange="emailCheck()">
+
             </p>
+
+            <p>Select Your role</p>
+            <input type="radio" name=rd1 value="Admin" />Admin
+            <input type="radio" name=rd1 value="Student" />Student
+
+
 
             <p class="texts">
                 Password<br>
-                <input type="password" class="inputs" id="t4" onchange="passCheck()">
-                <input type="text" class="message" id="m4" value="" readonly="true">
-            </p>
-            <p >Select Your role</p>
-            <input type="radio" >Teacher</input>
-            <input type="radio">Student</input>
+                <input type="password" class="inputs" name="p" onchange="passCheck()">
 
-            <div class="buttonCont" onmouseover="checkFields()" onmouseout="ReturnPosition()">
-                <input style="position: relative; top: 40px;"  type="button" class="block1" name="b1" id="b1" value="Create Account" onclick="CookieCreate()">
+            </p>
+
+            <div class="buttonCont">
+                <input style="position: relative; top: 40px;" type="submit" class="block1" name="submit" id="b1" value="Create Account" onclick="CookieCreate()">
             </div>
+            <?php
+            if (isset($_POST['submit'])) {
+                if (empty($_POST["n"]) || empty($_POST["m"]) || empty($_POST["r"] || empty($_POST["e"]) || empty($_POST["p"]))) {
+                    echo '<script>alert("Please fill out all the fields")</script>';
+                } else {
+                    $r = $_POST['rd1'];
+                    if ($r == "Admin") {
+                        $role = 0;
+                    } else {
+                        $role = 1;
+                    }
+                    $name = $_POST["n"];
+                    $num = $_POST["m"];
+                    $roll = $_POST["r"];
+                    $email = $_POST["e"];
+                    $pass = $_POST['p'];
+                    $_SESSION['name'] = $name;
+                    // if (!preg_match("/^([a-zA-Z' ]+)$/", $name) || !preg_match('/^[0-9]{10}+$/', $num) || !preg_match('/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/', $email)) {
+                    //     echo '<script>alert("Please enter proper details")</script>';
+                    // } else {
+                        $conn = mysqli_connect("localhost", "root", "", "mp");
+                        $query = "INSERT INTO `user` (`user_role`,`name`, `number`, `roll_num`,`email`,`password` ) VALUES ('$role','$name','$num','$roll','$email','$pass')";
+                        $res = mysqli_query($conn, $query) or die("Failed to
+                                query Table" . mysqli_error($conn));
+                        echo '<script>alert("Your account has been created!")</script>';
+                    }
+                }
+            // }
+
+            ?>
             <br><br>
 
-            <a href="Login.html"> <input type="button" class="block2" name="b2" id="b2"
-                    value="Have an account Log in"></a>
+            <a href="Login.php"> <input type="button" class="block2" name="b2" id="b2" value="Have an account Log in"></a>
 
     </div>
 </body>

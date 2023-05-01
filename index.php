@@ -21,8 +21,6 @@
                 <img src="Images/online-learning.png">
             </a>
         </div>
-        <a href="models.html" class="links">Home</a>
-        <a href="about.html" class="links">FAQ's</a>
         <div class="col-md-2 col-md-offset-4">
             <a href="Login.php" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"></span>&nbsp;<span class="title1"><b>Signin</b></span></a>
         </div>
@@ -31,27 +29,11 @@
 
     <div class="hero-image" style="background-image: url('Images/stud.jpg')">
         <div class="hero-text">
-            <h1 style="font-size:45px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-            <p>Lorem</p>
-            <button>Lorem</button>
+            <h1 style="font-size:45px">Welcome to online assesment system</h1>
+            <p>New user?</p>
+            <button>Hop in</button>
         </div>
     </div>
-
-
-    <!--Footer start-->
-    <div class="row footer">
-        <div class="col-md-3 box">
-            <a href="" target="_blank">About us</a>
-        </div>
-        <div class="col-md-3 box">
-            <a href="#" data-toggle="modal" data-target="#login">Admin Login</a>
-        </div>
-        <div class="col-md-3 box">
-            <a href="feedback.php" target="_blank">Feedback</a>
-        </div>
-    </div>
-
-    <!--footer end-->
 
 </body>
 

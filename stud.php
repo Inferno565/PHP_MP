@@ -8,10 +8,8 @@
     $row = array();
     $test_id;
     $sess = $_SESSION['user_current'];
-    $query_use = "SELECT `name` ,`number` from `user` where `email`='$sess'";
-    $row_use = (mysqli_fetch_array(mysqli_query($conn, $query_use), MYSQLI_ASSOC));
-    $pass_name = $row_use['name'];
-    $pass_id = $row_use['number'];
+    // print($sess);
+// var_dump($_SESSION);
     ?>
 
  <!DOCTYPE html>
@@ -158,10 +156,18 @@
                                  <td><b>Marks</b></td>
                                  <td></td>
                              </tr>';
+                    $query_use = "SELECT `name`,`number` from `user` where `name`='$sess'";
+                    $row_use = mysqli_query($conn, $query_use);
+                    // print_r($row_use);
+                    $res_use = mysqli_fetch_assoc($row_use);
+                    $pass_name = $res_use['name'];
+                    $pass_id = $res_use['number'];
                     $result = mysqli_query($conn, "SELECT * FROM `response` where `user_id`='$sess'");
+                    $row = mysqli_fetch_assoc($result);
+                    // print_r($row);
                     while ($row = mysqli_fetch_assoc($result)) {
                         $sr_no = $row['sr_no'];
-                        // $_SESSION['test_id'] = $sr_no;
+                        $_SESSION['test_id'] = $sr_no;
                         // echo $row['test_id'];
                         $sub = $row['user_id'];
                         // echo $row['sub'];

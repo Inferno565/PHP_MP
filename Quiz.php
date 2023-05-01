@@ -10,7 +10,9 @@ $start_id = $_SESSION['start_id'];
 $conn = mysqli_connect($host, $user, $password, $database_name) or die("Database connection not established");
 $_SESSION['counter'] =  0;
 $i = $_SESSION['counter'];
-$email = $_SESSION['user'];
+$email = $_SESSION['user_current'];
+// var_dump($_SESSION);
+// print_r($email);
 ?>
 
 <!DOCTYPE html>
@@ -30,22 +32,22 @@ $email = $_SESSION['user'];
 
 <body>
     <?php
-    $query_use = "SELECT `name` ,`number` from `user` where `email`='$email'";
+    $query_use = "SELECT `number` from `user` where `name`='$email'";
     $row_use = (mysqli_fetch_array(mysqli_query($conn, $query_use), MYSQLI_ASSOC));
-    $pass_name = $row_use['name'];
-    $pass_id = $row_use['number'];
+    // $pass_name = $row_use['name'];
+    // $pass_id = $row_use['number'];
     // print_r($name);
     // print_r($start_id);
     // print_r($qw);
 
-    $queryy = mysqli_query($conn, "SELECT `sr_no`,`q_no`, `ques`,`op1`,`op2`,`op3`,`op4`,`correct` FROM `$name` Where `test_id`='$start_id'");
+    $queryy = mysqli_query($conn, "SELECT `sr_no`,`q_no`,`ques`,`op1`,`op2`,`op3`,`op4`,`correct` FROM `$name` Where `test_id`='$start_id'");
     $row = mysqli_fetch_array($queryy, MYSQLI_BOTH);
     $correct_answer = $row['correct'];
     $i = 0;
     // do {
-    // echo $_SESSION['user'];
-    $i = $i + 1;
-    echo '<form class="form-horizontal title1" action="stud.php" method="POST">
+        // echo $_SESSION['user'];
+        $i = $i + 1;
+        echo '<form class="form-horizontal title1" action="stud.php" method="POST">
         <div class="container mt-5">
             <div class="d-flex justify-content-center row">
                 <div class="j-md-10 j-lg-10">
@@ -97,32 +99,34 @@ $email = $_SESSION['user'];
                  </div>
              </div>           
         </form>';
-    // $array[] = $row;
-    // print_r($array);
-    if (isset($_POST['quizsubmit'])) {
-        if (!empty($_POST['' . $i  . 'op'])) {
-            $Select_answer = $_POST['' . $i  . 'op'];
-            echo $Select_answer;
-            echo $correct_answer;
-            if ($Select_answer == $correct_answer) {
-                $score = +100;
-                $_SESSION['score'] = $score;
-                // echo $score;
-                // $quer_score_id="SELECT `number` from `user` where `email`='$email'";
-                // $quer_score_tid="SELECT `test_name` from `quizes` where `test_id`='$start_id'";
-                // $reslly=mysqli_fetch_array(mysqli_query($conn,$quer_score_tid));
-                // echo $reslly['test_name'];
-                $query_score = "INSERT INTO `response`(`user_id`, `test_id` ,`score`) VALUES ('1','11','$score')";
-                mysqli_query($conn,$query_score);
+        // $array[] = $row;
+        // print_r($array);
+        if (isset($_POST['quizsubmit'])) {
+            if (!empty($_POST['' . $i  . 'op'])) {
+                $Select_answer = $_POST['' . $i  . 'op'];
+                // echo $Select_answer;
+                // echo $correct_answer;
+                if ($Select_answer == $correct_answer) {
+                    $score = +100;
+                    $_SESSION['score'] = $score;
+                    // echo $score;
+                   
+                } else {
+                    $score = -100;
+                    $_SESSION['$score'] = $score;
+                    // echo "hahahaha";
+                }
+            $quer_score_id = "SELECT `number` from `user` where `name`='$email'";
+            $quer_score_tid = "SELECT `test_name` from `quizes` where `test_id`='$start_id'";
+            $reslly = mysqli_fetch_array(mysqli_query($conn, $quer_score_tid));
+            // echo $reslly['test_name'];
+            $query_score = "INSERT INTO `response`(`test_id` ,`user_id`,`score`) VALUES ('$start_id','$email',$score)";
+            $result = mysqli_query($conn, $query_score);
+            echo $result;
             } else {
-                $score = -100;
-                $_SESSION['$score'] = $score;
-                // echo "hahahaha";
+                echo 'Please select the value.';
             }
-        } else {
-            echo 'Please select the value.';
         }
-    }
     // } while ($row = mysqli_fetch_array($queryy, MYSQLI_ASSOC));
 
 

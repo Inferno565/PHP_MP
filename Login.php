@@ -59,7 +59,9 @@ session_start();
                 if ($row) {
                     echo '<script>alert("Login Successful!")</script>';
                     $user_current = $row['name'];
-                    $_SESSION['user_current'] = $user_current;
+                    $_SESSION['email_current']=$row['email'];
+                    // $_SESSION['user_current'] = $user_current;
+                    // =$email;
                     echo '<script>window.open("stud.php") </script>';
                 } else
                     echo '<script>alert("Incorrect Credentials!")</script>';
